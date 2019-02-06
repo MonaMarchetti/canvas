@@ -20,7 +20,7 @@
     ctx.lineWidth = 3;
     ctx.lineJoin = "bevel";
     ctx.lineCap = "round";
-    ctx.rect(100, 250, 600, 300);
+    ctx.rect(600, 300, 600, 300);
     ctx.fillStyle = "white";
     ctx.strokeStyle = "black";
     ctx.fill();
@@ -28,12 +28,12 @@
 
     //cercle rouge
     ctx.beginPath();
-    ctx.arc(400, 400, 75, 0, 2 * Math.PI);
+    ctx.arc(900, 450, 75, 0, 2 * Math.PI);
     ctx.fillStyle = "red";
     ctx.fill();
   </script>
 
-  <canvas id="mon_bateau" width="1800" height="950">
+  <canvas id="mon_bateau" width="1800" height="1000">
     Votre navigateur ne supporte pas Canvas :(
   </canvas>
   <script type="text/javascript">
@@ -44,10 +44,10 @@
 
     //coque
     ctx.beginPath();
-    ctx.moveTo(100, 710);
-    ctx.lineTo(1300, 710);
-    ctx.lineTo(1200, 900);
-    ctx.lineTo(200, 900);
+    ctx.moveTo(400, 710);
+    ctx.lineTo(1500, 710);
+    ctx.lineTo(1400, 900);
+    ctx.lineTo(500, 900);
     ctx.closePath();
     ctx.fillStyle = "brown";
     ctx.strokeStyle = "orange";
@@ -55,7 +55,7 @@
     ctx.stroke();
 
     //mât
-    ctx.rect(800, 10, 75, 700);
+    ctx.rect(1030, 10, 70, 700);
     ctx.fillStyle = "brown";
     ctx.strokeStyle = "orange";
     ctx.fill();
@@ -63,9 +63,9 @@
 
     //voiledroite
     ctx.beginPath();
-    ctx.moveTo(880, 100);
-    ctx.lineTo(1300, 500);
-    ctx.lineTo(880, 500);
+    ctx.moveTo(1105, 100);
+    ctx.lineTo(1505, 500);
+    ctx.lineTo(1105, 500);
     ctx.closePath();
     ctx.fillStyle = "white";
     ctx.strokeStyle = "lightblue";
@@ -74,9 +74,9 @@
 
     //voilegauche
     ctx.beginPath();
-    ctx.moveTo(795, 100);
-    ctx.lineTo(400, 500);
-    ctx.lineTo(795, 500);
+    ctx.moveTo(1025, 100);
+    ctx.lineTo(625, 500);
+    ctx.lineTo(1025, 500);
     ctx.closePath();
     ctx.fillStyle = "white";
     ctx.strokeStyle = "lightblue";
@@ -85,9 +85,9 @@
 
     //drapeau
     ctx.beginPath();
-    ctx.moveTo(880, 20);
-    ctx.lineTo(1000, 57.5);
-    ctx.lineTo(880, 85);
+    ctx.moveTo(1105, 20);
+    ctx.lineTo(1205, 57.5);
+    ctx.lineTo(1105, 85);
     ctx.closePath();
     ctx.fillStyle = "red";
     ctx.strokeStyle = "#cc0000";
@@ -95,7 +95,7 @@
     ctx.stroke();
   </script>
 
-  <canvas id="ma_maison" width="1800" height="900">
+  <canvas id="ma_maison" width="1800" height="1100">
     Votre navigateur ne supporte pas Canvas :(
   </canvas>
   <script type="text/javascript">
@@ -106,14 +106,14 @@
     ctx.lineCap = "round";
 
     //murs
-    ctx.rect(600, 275, 600, 600);
+    ctx.rect(600, 475, 600, 600);
     ctx.fillStyle = "beige";
     ctx.strokeStyle = "gray";
     ctx.fill();
     ctx.stroke();
 
     //cheminee
-    ctx.rect(1050, 50, 100, 200);
+    ctx.rect(1050, 250, 100, 200);
     ctx.fillStyle = "beige";
     ctx.strokeStyle = "gray";
     ctx.fill();
@@ -121,9 +121,9 @@
 
     //toit
     ctx.beginPath();
-    ctx.moveTo(600, 275);
-    ctx.lineTo(900, 5);
-    ctx.lineTo(1200, 275);
+    ctx.moveTo(600, 475);
+    ctx.lineTo(900, 205);
+    ctx.lineTo(1200, 475);
     ctx.closePath();
     ctx.fillStyle = "lightblue";
     ctx.strokeStyle = "gray";
@@ -131,14 +131,14 @@
     ctx.stroke();
 
     //porte
-    ctx.rect(825, 675, 150, 200);
+    ctx.rect(825, 875, 150, 200);
     ctx.fillStyle = "lightblue";
     ctx.strokeStyle = "gray";
     ctx.fill();
     ctx.stroke();
 
     //fenetre gauche
-    ctx.rect(700, 375, 120, 120);
+    ctx.rect(700, 575, 120, 120);
     ctx.fillStyle = "lightblue";
     ctx.strokeStyle = "gray";
     ctx.fill();
@@ -146,16 +146,16 @@
 
     //chassis gauche
     ctx.beginPath();
-    ctx.moveTo(700, 375);
-    ctx.lineTo(820, 495);
-    ctx.moveTo(820, 375);
-    ctx.lineTo(700, 495);
+    ctx.moveTo(700, 575);
+    ctx.lineTo(820, 695);
+    ctx.moveTo(820, 575);
+    ctx.lineTo(700, 695);
     ctx.closePath();
     ctx.strokeStyle = "gray";
     ctx.stroke();
 
     //fenetre droite
-    ctx.rect(980, 375, 120, 120);
+    ctx.rect(980, 575, 120, 120);
     ctx.fillStyle = "lightblue";
     ctx.strokeStyle = "gray";
     ctx.fill();
@@ -163,24 +163,24 @@
 
     //chassis droit
     ctx.beginPath();
-    ctx.moveTo(980, 375);
-    ctx.lineTo(1100, 495);
-    ctx.moveTo(1100, 375);
-    ctx.lineTo(980, 495);
+    ctx.moveTo(980, 575);
+    ctx.lineTo(1100, 695);
+    ctx.moveTo(1100, 575);
+    ctx.lineTo(980, 695);
     ctx.closePath();
     ctx.strokeStyle = "gray";
     ctx.stroke();
 
     //poignée
     ctx.beginPath();
-    ctx.arc(935, 750, 12, 0, Math.PI * 2, false);
+    ctx.arc(935, 950, 12, 0, Math.PI * 2, false);
     ctx.fillStyle = "beige";
     ctx.strokeStyle = "gray";
     ctx.fill();
     ctx.stroke();
   </script>
 
-  <canvas id="mon_bonhomme" width="1800" height="900">
+  <canvas id="mon_bonhomme" width="1800" height="1000">
     Votre navigateur ne supporte pas Canvas :(
   </canvas>
 
@@ -390,7 +390,7 @@
     ctx.stroke();
   </script>
 
-  <canvas id="mon_android" width="1800" height="900">
+  <canvas id="mon_android" width="1800" height="1000">
     Votre navigateur ne supporte pas Canvas :(
   </canvas>
   <script type="text/javascript">
