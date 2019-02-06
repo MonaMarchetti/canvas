@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Mes canvas</title>
+</head>
+
+<body>
+
+  <canvas id="mon_drapeau" width="1800" height="900">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_drapeau");
+    var ctx = c.getContext("2d");
+
+
+    //fond blanc
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "bevel";
+    ctx.lineCap = "round";
+    ctx.rect(100, 250, 600, 300);
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "black";
+    ctx.fill();
+    ctx.stroke();
+
+    //cercle rouge
+    ctx.beginPath();
+    ctx.arc(400, 400, 75, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill();
+  </script>
+
+  <canvas id="mon_bateau" width="1800" height="950">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_bateau");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 5;
+    ctx.lineJoin = "round";
+
+    //coque
+    ctx.beginPath();
+    ctx.moveTo(100, 710);
+    ctx.lineTo(1300, 710);
+    ctx.lineTo(1200, 900);
+    ctx.lineTo(200, 900);
+    ctx.closePath();
+    ctx.fillStyle = "brown";
+    ctx.strokeStyle = "orange";
+    ctx.fill();
+    ctx.stroke();
+
+    //mât
+    ctx.rect(800, 10, 75, 700);
+    ctx.fillStyle = "brown";
+    ctx.strokeStyle = "orange";
+    ctx.fill();
+    ctx.stroke();
+
+    //voiledroite
+    ctx.beginPath();
+    ctx.moveTo(880, 100);
+    ctx.lineTo(1300, 500);
+    ctx.lineTo(880, 500);
+    ctx.closePath();
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "lightblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //voilegauche
+    ctx.beginPath();
+    ctx.moveTo(795, 100);
+    ctx.lineTo(400, 500);
+    ctx.lineTo(795, 500);
+    ctx.closePath();
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "lightblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //drapeau
+    ctx.beginPath();
+    ctx.moveTo(880, 20);
+    ctx.lineTo(1000, 57.5);
+    ctx.lineTo(880, 85);
+    ctx.closePath();
+    ctx.fillStyle = "red";
+    ctx.strokeStyle = "#cc0000";
+    ctx.fill();
+    ctx.stroke();
+  </script>
+
+  <canvas id="ma_maison" width="1800" height="900">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("ma_maison");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 5;
+    ctx.lineJoin = "bevel";
+    ctx.lineCap = "round";
+
+    //murs
+    ctx.rect(600, 275, 600, 600);
+    ctx.fillStyle = "beige";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //cheminee
+    ctx.rect(1050, 50, 100, 200);
+    ctx.fillStyle = "beige";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //toit
+    ctx.beginPath();
+    ctx.moveTo(600, 275);
+    ctx.lineTo(900, 5);
+    ctx.lineTo(1200, 275);
+    ctx.closePath();
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //porte
+    ctx.rect(825, 675, 150, 200);
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //fenetre gauche
+    ctx.rect(700, 375, 120, 120);
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //chassis gauche
+    ctx.beginPath();
+    ctx.moveTo(700, 375);
+    ctx.lineTo(820, 495);
+    ctx.moveTo(820, 375);
+    ctx.lineTo(700, 495);
+    ctx.closePath();
+    ctx.strokeStyle = "gray";
+    ctx.stroke();
+
+    //fenetre droite
+    ctx.rect(980, 375, 120, 120);
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //chassis droit
+    ctx.beginPath();
+    ctx.moveTo(980, 375);
+    ctx.lineTo(1100, 495);
+    ctx.moveTo(1100, 375);
+    ctx.lineTo(980, 495);
+    ctx.closePath();
+    ctx.strokeStyle = "gray";
+    ctx.stroke();
+
+    //poignée
+    ctx.beginPath();
+    ctx.arc(935, 750, 12, 0, Math.PI * 2, false);
+    ctx.fillStyle = "beige";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+  </script>
+
+  <canvas id="mon_bonhomme" width="1800" height="900">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+
+  <script type="text/javascript">
+    var c = document.getElementById("mon_bonhomme");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 5;
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+
+    //cheveux arrière
+    ctx.beginPath();
+    ctx.rect(840, 260, 120, 60);
+    ctx.fillStyle = "#b32d00";
+    ctx.strokeStyle = "#802000";
+    ctx.fill();
+    ctx.stroke();
+
+    //bras gauche
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.moveTo(885, 355);
+    ctx.lineTo(800, 500);
+    ctx.closePath();
+    ctx.strokeStyle = "pink";
+    ctx.stroke();
+
+    //bras droit
+    ctx.beginPath();
+    ctx.moveTo(915, 355);
+    ctx.lineTo(1000, 500);
+    ctx.closePath();
+    ctx.strokeStyle = "pink";
+    ctx.stroke();
+
+    //pied gauche
+    ctx.lineWidth = 6;
+    ctx.beginPath();
+    ctx.arc(855, 874, 10, 0, Math.PI, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    ctx.stroke();
+
+    //pied droit
+    ctx.beginPath();
+    ctx.arc(945, 874, 10, 0, Math.PI, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    ctx.stroke();
+
+    //jupe
+    ctx.lineWidth = 8;
+    ctx.beginPath();
+    ctx.moveTo(900, 490);
+    ctx.lineTo(775, 870);
+    ctx.lineTo(1025, 870);
+    ctx.closePath();
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "darkblue";
+    ctx.stroke();
+    ctx.fill();
+
+    //epaulette gauche
+    ctx.lineWidth = 5;
+    ctx.beginPath();
+    ctx.arc(880, 363, 15, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "darkblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //epaulette droite
+    ctx.beginPath();
+    ctx.arc(920, 363, 15, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "darkblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //buste
+    ctx.beginPath();
+    ctx.rect(885, 350, 30, 190);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "darkblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //ceinture
+    ctx.beginPath();
+    ctx.rect(882, 528, 36, 11);
+    ctx.strokeStyle = "#ff3399";
+    ctx.fillStyle = "#ff3399";
+    ctx.fill();
+    ctx.stroke();
+
+    //boucle
+    ctx.beginPath();
+    ctx.arc(900, 534, 8, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    ctx.stroke();
+
+    //col
+    ctx.beginPath();
+    ctx.moveTo(900, 375);
+    ctx.lineTo(886, 349);
+    ctx.lineTo(914, 349);
+    ctx.closePath();
+    ctx.fillStyle = "pink";
+    ctx.strokeStyle = "purple";
+    ctx.fill();
+    ctx.stroke();
+
+    //cou
+    ctx.beginPath();
+    ctx.rect(895, 300, 10, 50);
+    ctx.fillStyle = "pink";
+    ctx.strokeStyle = "pink";
+    ctx.fill();
+    ctx.stroke();
+
+    //tete
+    ctx.beginPath();
+    ctx.arc(900, 250, 60, 0, Math.PI * 2, false);
+    ctx.fillStyle = "pink";
+    ctx.strokeStyle = "pink";
+    ctx.fill();
+    ctx.stroke();
+
+    //smile
+    ctx.beginPath();
+    ctx.arc(900, 270, 20, 0, Math.PI, false);
+    ctx.strokeStyle = "#ffe6ff";
+    ctx.stroke();
+
+    //oeil gauche
+    ctx.beginPath();
+    ctx.arc(880, 230, 5, 0, Math.PI, false);
+    ctx.strokeStyle = "#802000";
+    ctx.stroke();
+
+    //oeil droit
+    ctx.beginPath();
+    ctx.arc(920, 230, 5, 0, Math.PI, false);
+    ctx.strokeStyle = "#802000";
+    ctx.stroke();
+
+    //meche gauche
+    ctx.beginPath();
+    ctx.bezierCurveTo(915, 190, 830, 170, 840, 265);
+    ctx.closePath();
+    ctx.fillStyle = "#b32d00";
+    ctx.strokeStyle = "#802000";
+    ctx.fill();
+    ctx.stroke();
+
+    //meche droite
+    ctx.beginPath();
+    ctx.bezierCurveTo(900, 190, 965, 175, 960, 265);
+    ctx.closePath();
+    ctx.fillStyle = "#b32d00";
+    ctx.strokeStyle = "#802000";
+    ctx.fill();
+    ctx.stroke();
+
+    //petale gauche
+    ctx.beginPath();
+    ctx.arc(922, 194, 10, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "#ff3399";
+    ctx.fill();
+    ctx.stroke();
+
+    //petale droit
+    ctx.beginPath();
+    ctx.arc(939, 206, 10, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "#ff3399";
+    ctx.fill();
+    ctx.stroke();
+
+    //petale bas
+    ctx.beginPath();
+    ctx.arc(925, 208, 10, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "#ff3399";
+    ctx.fill();
+    ctx.stroke();
+
+    //petale haut
+    ctx.beginPath();
+    ctx.arc(936, 193, 10, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "#ff3399";
+    ctx.fill();
+    ctx.stroke();
+
+    //coeur
+    ctx.beginPath();
+    ctx.arc(930, 200, 7, 0, Math.PI * 2, false);
+    ctx.strokeStyle = "purple";
+    ctx.fillStyle = "yellow";
+    ctx.fill();
+    ctx.stroke();
+  </script>
+
+  <canvas id="mon_android" width="1800" height="900">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_android");
+    var ctx = c.getContext("2d");
+
+    //corps carre
+    ctx.lineWidth = 80;
+    ctx.lineJoin = "miter";
+    ctx.lineCap = "square";
+    ctx.rect(750, 440, 300, 100);
+    ctx.fillStyle = "#33cc33";
+    ctx.strokeStyle = "#33cc33";
+    ctx.fill();
+    ctx.stroke();
+
+    //corps rond
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.rect(750, 490, 300, 200);
+    ctx.fillStyle = "#33cc33";
+    ctx.strokeStyle = "#33cc33";
+    ctx.fill();
+    ctx.stroke();
+
+    //jambe gauche
+    ctx.beginPath();
+    ctx.moveTo(830, 590);
+    ctx.lineTo(830, 830);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //jambe droite
+    ctx.beginPath();
+    ctx.moveTo(970, 590);
+    ctx.lineTo(970, 830);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //bras gauche
+    ctx.beginPath();
+    ctx.moveTo(650, 430);
+    ctx.lineTo(650, 630);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //bras droit
+    ctx.beginPath();
+    ctx.moveTo(1150, 430);
+    ctx.lineTo(1150, 630);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //tete
+    ctx.beginPath();
+    ctx.arc(900, 380, 190, 0, Math.PI, true);
+    ctx.fillStyle = "#33cc33";
+    ctx.fill();
+
+    //oeil gauche
+    ctx.beginPath();
+    ctx.arc(820, 280, 17, 0, Math.PI * 2, true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    //oeil droit
+    ctx.beginPath();
+    ctx.arc(980, 280, 17, 0, Math.PI * 2, true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    //antenne gauche
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.moveTo(800, 150);
+    ctx.lineTo(830, 205);
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //antenne droite
+    ctx.beginPath();
+    ctx.moveTo(1000, 150);
+    ctx.lineTo(970, 205);
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+  </script>
+</body>
+
+</html>
