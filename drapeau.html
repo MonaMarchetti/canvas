@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Drapeau</title>
+</head>
+
+<body>
+  <canvas id="mon_canvas" width="800" height="800" style="border:1px dotted blue;">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_canvas");
+    var ctx = c.getContext("2d");
+
+
+    //fond blanc
+    ctx.lineWidth = 3;
+    ctx.lineJoin = "bevel";
+    ctx.lineCap = "round";
+    ctx.rect(100, 250, 600, 300);
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "black";
+    ctx.fill();
+    ctx.stroke();
+
+    //cercle rouge
+    ctx.beginPath();
+    ctx.arc(400, 400, 75, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill();
+  </script>
+</body>
+
+</html>

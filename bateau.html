@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Bateau</title>
+</head>
+
+<body>
+  <canvas id="mon_canvas" width="1800" height="950" style="border:1px dotted blue;">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_canvas");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 5;
+    ctx.lineJoin = "round";
+
+    //coque
+    ctx.beginPath();
+    ctx.moveTo(100,710);
+    ctx.lineTo(1300,710);
+    ctx.lineTo(1200,900);
+    ctx.lineTo(200,900);
+    ctx.closePath();
+    ctx.fillStyle = "brown";
+    ctx.strokeStyle = "orange";
+    ctx.fill();
+    ctx.stroke();
+
+    //mât
+    ctx.rect(800, 10, 75, 700);
+    ctx.fillStyle = "brown";
+    ctx.strokeStyle = "orange";
+    ctx.fill();
+    ctx.stroke();
+
+    //voiledroite
+    ctx.beginPath();
+    ctx.moveTo(880,100);
+    ctx.lineTo(1300,500);
+    ctx.lineTo(880,500);
+    ctx.closePath();
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "lightblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //voilegauche
+    ctx.beginPath();
+    ctx.moveTo(795,100);
+    ctx.lineTo(400,500);
+    ctx.lineTo(795,500);
+    ctx.closePath();
+    ctx.fillStyle = "white";
+    ctx.strokeStyle = "lightblue";
+    ctx.fill();
+    ctx.stroke();
+
+    //drapeau
+    ctx.beginPath();
+    ctx.moveTo(880,20);
+    ctx.lineTo(1000,57.5);
+    ctx.lineTo(880,85);
+    ctx.closePath();
+    ctx.fillStyle = "red";
+    ctx.strokeStyle = "#cc0000";
+    ctx.fill();
+    ctx.stroke();
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Maison</title>
+</head>
+
+<body>
+  <canvas id="mon_canvas" width="1800" height="900" style="border:1px dotted blue;">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_canvas");
+    var ctx = c.getContext("2d");
+    ctx.lineWidth = 5;
+    ctx.lineJoin = "bevel";
+    ctx.lineCap = "round";
+
+    //murs
+    ctx.rect(600, 275, 600, 600);
+    ctx.fillStyle = "beige";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //cheminee
+    ctx.rect(1050, 50, 100, 200);
+    ctx.fillStyle = "beige";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //toit
+    ctx.beginPath();
+    ctx.moveTo(600,275);
+    ctx.lineTo(900,5);
+    ctx.lineTo(1200,275);
+    ctx.closePath();
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //porte
+    ctx.rect(825, 675, 150, 200);
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //fenetre gauche
+    ctx.rect(700, 375, 120, 120);
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //chassis gauche
+    ctx.beginPath();
+    ctx.moveTo(700,375);
+    ctx.lineTo(820,495);
+    ctx.moveTo(820,375);
+    ctx.lineTo(700,495);
+    ctx.closePath();
+    ctx.strokeStyle = "gray";
+    ctx.stroke();
+
+    //fenetre droite
+    ctx.rect(980, 375, 120, 120);
+    ctx.fillStyle = "lightblue";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+    //chassis droit
+    ctx.beginPath();
+    ctx.moveTo(980,375);
+    ctx.lineTo(1100,495);
+    ctx.moveTo(1100,375);
+    ctx.lineTo(980,495);
+    ctx.closePath();
+    ctx.strokeStyle = "gray";
+    ctx.stroke();
+
+    //poignée
+    ctx.beginPath();
+    ctx.arc(935, 750, 12, 0, Math.PI * 2, false);
+    ctx.fillStyle = "beige";
+    ctx.strokeStyle = "gray";
+    ctx.fill();
+    ctx.stroke();
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Android</title>
+</head>
+
+<body>
+  <canvas id="mon_canvas" width="1800" height="900" style="border:1px dotted blue;">
+    Votre navigateur ne supporte pas Canvas :(
+  </canvas>
+  <script type="text/javascript">
+    var c = document.getElementById("mon_canvas");
+    var ctx = c.getContext("2d");
+
+    //corps carre
+    //ctx.beginPath();
+    ctx.lineWidth = 80;
+    ctx.lineJoin = "miter";
+    ctx.lineCap = "square";
+    ctx.rect(750, 440, 300, 100);
+    ctx.fillStyle = "#33cc33";
+    ctx.strokeStyle = "#33cc33";
+    ctx.fill();
+    ctx.stroke();
+
+    //corps rond
+    ctx.lineJoin = "round";
+    ctx.lineCap = "round";
+    ctx.rect(750, 490, 300, 200);
+    ctx.fillStyle = "#33cc33";
+    ctx.strokeStyle = "#33cc33";
+    ctx.fill();
+    ctx.stroke();
+
+    //jambe gauche
+    ctx.beginPath();
+    ctx.moveTo(830,590);
+    ctx.lineTo(830,830);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //jambe droite
+    ctx.beginPath();
+    ctx.moveTo(970,590);
+    ctx.lineTo(970,830);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //bras gauche
+    ctx.beginPath();
+    ctx.moveTo(650,430);
+    ctx.lineTo(650,630);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //bras droit
+    ctx.beginPath();
+    ctx.moveTo(1150,430);
+    ctx.lineTo(1150,630);
+    ctx.closePath();
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //tete
+    ctx.beginPath();
+    ctx.arc(900, 380, 190, 0, Math.PI, true);
+    ctx.fillStyle = "#33cc33";
+    ctx.fill();
+
+    //oeil gauche
+    ctx.beginPath();
+    ctx.arc(820, 280, 17, 0, Math.PI * 2, true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    //oeil droit
+    ctx.beginPath();
+    ctx.arc(980, 280, 17, 0, Math.PI * 2, true);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    //antenne gauche
+    ctx.lineWidth = 15;
+    ctx.beginPath();
+    ctx.moveTo(800,150);
+    ctx.lineTo(830,205);
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+    //antenne droite
+    ctx.beginPath();
+    ctx.moveTo(1000,150);
+    ctx.lineTo(970,205);
+    ctx.strokeStyle = "#33cc33";
+    ctx.stroke();
+
+  </script>
+</body>
+
+</html>
